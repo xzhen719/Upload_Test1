@@ -5,6 +5,7 @@ import com.example.domain.*;
 public class EmployeeTest {
 
 	public static void main(String[] args) {
+		System.out.println("test");
 		Employee[] emps = new Employee [5];
 		emps[0] = new Employee("Abby", "A123435234", 50000);
 		emps[1] = new Admin("Amy", "B123456345", 70000);
