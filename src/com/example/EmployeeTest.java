@@ -33,16 +33,20 @@ public class EmployeeTest {
 		emps[4].addEmployee(emps[3]);
 //		emps[4].toString();
 		
-		System.out.println("設定工時");
-		((Admin)emps[0].setHours(140));
-		((Admin)emps[1].setHours(180));
+		
 		
 		for(Object e: emps) {
 			System.out.print(String.valueOf(e));
 		}
 		
+		System.out.println();
+		
+		
+		((Admin)emps[0]).setHours(140);
+		((Admin)emps[1]).setHours(180);
+		
 		for(Object e: emps) {
-			System.out.println(e.getName()+"本月薪資:"+e.getPay()+"元");
+			System.out.println(((Employee) e).getName()+"本月薪資:"+((Employee) e).getPay()+"元");
 			
 		}
 		System.out.println();
