@@ -3,6 +3,7 @@ package com.example.domain;
 public class Director extends Manager{
 
 	private double budget;
+	private double baseBonus = 500000;
 
 	public Director(String name, String ssn, double salary, String deptName, double budget) {
 		super(name, ssn, salary, deptName);
@@ -42,6 +43,9 @@ public class Director extends Manager{
 		// TODO Auto-generated method stub
 		return super.addEmployee(e);
 	}
-	
-	
+	@Override
+	public double getBonus() {
+		// TODO Auto-generated method stub
+		return this.baseBonus*this.calcPerMultiplier();
+	}
 }

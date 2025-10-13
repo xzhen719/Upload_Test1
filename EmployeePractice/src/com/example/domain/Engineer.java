@@ -1,8 +1,6 @@
 package com.example.domain;
 
-import java.util.Arrays;
-
-public class Engineer extends Employee{
+public class Engineer extends Employee implements RegularStaff{
 	private int skillCount;
 	private String[] skills;
 
@@ -40,9 +38,9 @@ public class Engineer extends Employee{
 		// TODO Auto-generated method stub
 		return this.getSalary()+skillCount*3000;
 	}
-
-
 	
-	
-
+	@Override
+	public double getBonus() {
+		return this.getSalary()*this.calcPerMultiplier();
+	}
 }

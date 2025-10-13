@@ -2,9 +2,10 @@ package com.example.domain;
 
 import java.util.ArrayList;
 
-public class Manager extends Employee{
+public class Manager extends Employee implements RegularStaff{
 	private String deptName;
 	protected ArrayList<Employee> employees = new ArrayList<>();
+	private double baseBonus = 100000;
 
 	public Manager(String name, String ssn, double salary, String deptName) {
 		super(name, ssn, salary);
@@ -70,6 +71,9 @@ public class Manager extends Employee{
 		return this.getSalary()+employees.size()*2000;
 	}
 	
-	
-
+	@Override
+	public double getBonus() {
+		// TODO Auto-generated method stub
+		return this.baseBonus*this.calcPerMultiplier();
+	}
 }
