@@ -21,7 +21,8 @@ public class Director extends Manager{
 		sb.append("budget: "+ nf.format(this.budget));
 		return sb.toString();
 	}
-
+	
+	
 //	@Override
 //	public void displayInformation() {
 //		// TODO Auto-generated method stub
@@ -29,6 +30,12 @@ public class Director extends Manager{
 //		super.displayInformation();
 //		
 //	}
+
+	@Override
+	public double getPay() {
+		// TODO Auto-generated method stub
+		return this.getSalary()+employees.size()*10000;
+	}
 
 	@Override
 	public boolean addEmployee(Employee e) {

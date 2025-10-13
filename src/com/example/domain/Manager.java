@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Manager extends Employee{
 	private String deptName;
-	private ArrayList<Employee> employees = new ArrayList<>();
+	protected ArrayList<Employee> employees = new ArrayList<>();
 
 	public Manager(String name, String ssn, double salary, String deptName) {
 		super(name, ssn, salary);
@@ -63,6 +63,11 @@ public class Manager extends Employee{
 		}
 		temp = temp + "\n";
 		return temp;
+	}
+
+	@Override
+	public double getPay() {
+		return this.getSalary()+employees.size()*2000;
 	}
 	
 	

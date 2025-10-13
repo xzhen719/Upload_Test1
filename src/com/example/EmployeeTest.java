@@ -5,10 +5,9 @@ import com.example.domain.*;
 public class EmployeeTest {
 
 	public static void main(String[] args) {
-		System.out.println("test");
 		Employee[] emps = new Employee [5];
-		emps[0] = new Employee("Abby", "A123435234", 50000);
-		emps[1] = new Admin("Amy", "B123456345", 70000);
+		emps[0] = new Admin("Abby", "A123435234", 10000);
+		emps[1] = new Admin("Amy", "B123456345", 30000);
 		emps[2]= new Engineer("Sean", "C1234345", 55555);
 		if(emps[2] instanceof Engineer) {
 			Engineer eng = (Engineer)emps[2];
@@ -34,9 +33,20 @@ public class EmployeeTest {
 		emps[4].addEmployee(emps[3]);
 //		emps[4].toString();
 		
+		System.out.println("設定工時");
+		((Admin)emps[0].setHours(140));
+		((Admin)emps[1].setHours(180));
+		
 		for(Object e: emps) {
 			System.out.print(String.valueOf(e));
 		}
+		
+		for(Object e: emps) {
+			System.out.println(e.getName()+"本月薪資:"+e.getPay()+"元");
+			
+		}
+		System.out.println();
+		
 	}
 
 }

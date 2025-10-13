@@ -3,7 +3,8 @@ package com.example.domain;
 import java.text.NumberFormat;
 import java.util.Objects;
 
-public class Employee {
+public abstract class Employee {
+	
 	private static int nextId = 101;
 	private int empID;
 	private String name = "No_name";
@@ -81,5 +82,7 @@ public class Employee {
 				"ssn: "+ this.ssn+"\n"+
 				"salary: "+ nf.format(this.salary)+"\n";
 	}
+	
+	public abstract double getPay();
 	
 }

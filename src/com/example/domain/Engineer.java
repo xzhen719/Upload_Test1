@@ -35,6 +35,12 @@ public class Engineer extends Employee{
 		}
 	}
 
+	@Override
+	public double getPay() {
+		// TODO Auto-generated method stub
+		return this.getSalary()+skillCount*3000;
+	}
+
 
 	
 	
