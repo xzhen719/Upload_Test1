@@ -2,6 +2,7 @@ package com.example;
 
 public abstract class Animal {
 	protected int legs;
+	protected String name;
 	
 	protected Animal() {}
 	protected Animal(int legs) {
