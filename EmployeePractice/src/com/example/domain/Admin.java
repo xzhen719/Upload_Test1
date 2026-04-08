@@ -3,8 +3,8 @@ package com.example.domain;
 public class Admin extends Employee {
 	private int hours = 160;
 
-	public Admin(String name, String ssn, double salary) {
-		super(name, ssn, salary);
+	public Admin(String name, String ssn, double salary, Branch branch) {
+		super(name, ssn, salary, branch);
 		// TODO Auto-generated constructor stub
 	}
 	

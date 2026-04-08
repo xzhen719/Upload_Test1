@@ -7,8 +7,8 @@ public class Manager extends Employee implements RegularStaff{
 	protected ArrayList<Employee> employees = new ArrayList<>();
 	private double baseBonus = 100000;
 
-	public Manager(String name, String ssn, double salary, String deptName) {
-		super(name, ssn, salary);
+	public Manager(String name, String ssn, double salary, String deptName, Branch branch) {
+		super(name, ssn, salary, branch);
 		this.deptName = deptName;
 	}
 

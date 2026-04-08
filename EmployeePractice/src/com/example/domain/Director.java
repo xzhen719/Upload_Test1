@@ -5,8 +5,8 @@ public class Director extends Manager{
 	private double budget;
 	private double baseBonus = 500000;
 
-	public Director(String name, String ssn, double salary, String deptName, double budget) {
-		super(name, ssn, salary, deptName);
+	public Director(String name, String ssn, double salary, String deptName, double budget, Branch branch) {
+		super(name, ssn, salary, deptName, branch);
 		this.budget = budget;
 		
 	}
@@ -19,7 +19,7 @@ public class Director extends Manager{
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder(super.toString());
-		sb.append("budget: "+ nf.format(this.budget));
+		sb.append("budget: "+ branch.getCurrency() + nf.format(this.budget));
 		return sb.toString();
 	}
 	
